@@ -20,3 +20,14 @@ solveEquation.apply(null, arr);
 //значения d<0 (-6, 9, 2)
 //значения d>0 (5, 2, -7)
 //значения d=0 (16, -8, 1)
+
+function calculateTotalMortgage(percent, contribution, amount, countMonths) {
+  if (!isNaN(percent) && !isNaN(contribution) && !isNaN(amount) && !isNAN(countMonths)) {
+      const perMonth = percent / 100 / 12;
+      const bodyCredit = amount - contribution;
+      const monthly = bodyCredit * (perMonth + (perMonth / (((1 + perMonth) ** countMonths) - 1)));
+      const totalSum = parseFloat((monthly * countMonths).toFixed(2));
+      return totalSum;
+  }
+  return false;
+}
