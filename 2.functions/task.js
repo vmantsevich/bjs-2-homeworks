@@ -1,6 +1,6 @@
 function getArrayParams(...arr) {
-	let min = [];
-	let max = [];
+	let min = Infinity;
+  	let max = -Infinity; 
 	let sum = 0;
 	let avg;
 	for (let i = 0; i < arr.length; i++) {
@@ -32,6 +32,9 @@ function summElementsWorker(...arr) {
 console.log(summElementsWorker(10, 10, 11, 20, 10));
 
 function differenceMaxMinWorker(...arr) {
+	if(arr.length === 0) {
+		return 0;
+	} 
 	let min = arr[0];
 	let max = arr[0];
 	for (let i = 0; i < arr.length; i++) {
@@ -47,6 +50,9 @@ function differenceMaxMinWorker(...arr) {
 console.log(differenceMaxMinWorker(30, 10, 51, 20, 10));
 
 function differenceEvenOddWorker(...arr) {
+	if(arr.length === 0) {
+		return 0;
+	} 
 	let sumEvenElement = 0;
 	let sumOddElement = 0;
 	for (let i = 0; i < arr.length; i++) {
